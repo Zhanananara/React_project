@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header/Header";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import Section from "./components/Section/Section";
+import Footer from "./components/Footer/Footer";
+import LastTask from "./components/LastTask/LastTask";
 
 function App() {
+  let functionArr = (arr) => {
+    console.log(arr);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header image="https://wallpapercave.com/wp/wp4587060.jpg" />
+      <Section />
+      <Footer />
+      <LastTask functionArr={functionArr} />
     </div>
   );
 }
